@@ -18,9 +18,10 @@ import { useStore, Mutation } from '@/store/index'
 const store = useStore()
 const appVersion = store.state.version // not reactive!
 const count = computed(() => store.state.count)
-const props = defineProps<{
-  msg: string
-}>()
+const props =
+  defineProps<{
+    msg: string
+  }>()
 
 function increment() {
   store.commit(Mutation.INCREMENT, 1)
